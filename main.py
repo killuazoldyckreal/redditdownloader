@@ -27,6 +27,7 @@ def save_meme(subreddit):
                     result = ydl.extract_info(url, download=False)
                     title = ydl.prepare_filename(result)
                 ydl.download([url])
+                print("Post downloaded successfully")
             else:
                 print("Your requested post format not found!")
         else:
