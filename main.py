@@ -27,6 +27,12 @@ def save_meme(subreddit):
                     result = ydl.extract_info(url, download=False)
                     title = ydl.prepare_filename(result)
                 ydl.download([url])
+            else:
+                print("Your requested post format not found!")
+        else:
+            print("Empty subreddit! No posts found!")
+    else:
+        print("Subreddit doesn't exists!")
 
 subreddit = "fingmemes" # Replace with desired subreddit name
 save_meme(subreddit)
